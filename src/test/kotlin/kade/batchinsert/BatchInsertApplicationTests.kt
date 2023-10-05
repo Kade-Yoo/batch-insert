@@ -8,6 +8,7 @@ class BatchInsertApplicationTests {
 
     @Test
     fun contextLoads() {
+
     }
 
 }

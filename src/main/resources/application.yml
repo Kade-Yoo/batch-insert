@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    hikari:
+      schema: classpath:schema.sql
+
+  h2:
+    console:
+      enabled: true

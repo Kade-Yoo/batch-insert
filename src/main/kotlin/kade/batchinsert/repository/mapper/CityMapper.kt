@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Select
 @Mapper
 interface CityMapper {
 
-    @Insert("INSERT INTO city (name, state, country) VALUES(#{name}, #{state}, #{country})")
+    @Insert("INSERT INTO city (id, name, state, country) VALUES(#{id}, #{name}, #{state}, #{country})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     fun insert(city: City)
 

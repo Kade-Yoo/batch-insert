@@ -23,7 +23,14 @@ class CityServiceTest {
     @Test
     fun findById() {
         val id = 1L
-        val city = cityService.findById(id)
-        assertEquals(city.id, 1L)
+
+        val city = City(name = "San Francisco", state = "CA", country = "US")
+        cityService.save(city)
+
+        val city2 = City(name = "San Francisco", state = "CA", country = "US")
+        cityService.save(city)
+
+        val findById = city2.id.let { cityService.findById(it) }
+        assertEquals(findById.id, 1L)
     }
 }

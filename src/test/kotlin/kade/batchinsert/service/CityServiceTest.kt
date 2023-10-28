@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
-@SpringBootTest
+@SpringBootTest(properties = ["spring.config.location=classpath:/application.yml"])
 class CityServiceTest {
 
     @Autowired
